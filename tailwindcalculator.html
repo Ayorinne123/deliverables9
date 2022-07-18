@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function dis(val)
+        {
+            document.getElementById("result").value+=val
+        }
+        function solve()
+        {
+            let x = document.getElementById("result").value
+            let y = eval(x)
+            document.getElementById("result").value = y
+        }
+        function clr() 
+        {
+            document.getElementById("result").value = ""
+        }
+    </script>
+    <title>JSCalculator</title>
+</head>
+<body class="">
+
+      <table>
+        <tr class="bg-white-900 rounded-lg h-100% w-%100 px-20 border-solid border-solid border-2 border-indigo-600 bg-green-600 rounded-full items-center">
+            <td colspan="3" class="h-100% w-%100 border-2 border-indigo-600 rounded-full bg-white">
+                <input type="text" class=" button h-100% w-100% px-12 py-2 border-solid border-2 border-indigo-600 rounded-full text-center" id="result">
+            </td>            
+            <td class="h-100% w-100% border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 py-2 border-solid border-solid border-2 border-indigo-600 rounded-full text-white text-bold" value="C" onclick="clr('')">
+            </td>
+        </tr>
+        <tr class="bg-white-900 rounded-lg h-100% w-%100 px-20 border-solid border-solid border-2 border-indigo-600 bg-green-600">
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="1" onclick="dis('1')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="2" onclick="dis('2')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="3" onclick="dis('3')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold"  value="/" onclick="dis('/')"/>
+            </td>
+        </tr>
+        <tr class="bg-white-900 rounded-lg h-100% w-%100 px-20 border-solid border-solid border-2 border-indigo-600 bg-green-600 ">
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="4" onclick="dis('4')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="5" onclick="dis('5')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="6" onclick="dis('6')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="*">
+            </td>
+        </tr>
+        <tr class="bg-white-900 rounded-lg h-100% w-%100 px-20 border-solid border-solid border-2 border-indigo-600 bg-green-600">
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="7" onclick="dis('7')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="8" onclick="dis('8')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="9" onclick="dis('9')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="-" onclick="dis('-')"/>
+            </td>
+        </tr>
+        <tr class="bg-white-900 rounded-lg h-100% w-%100 px-20 border-solid border-solid border-2 border-indigo-600 bg-green-600">
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="0" onclick="dis('0')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="." onclick="dis('.')"/>
+            </td>
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="=" onclick="solve('=')"/>
+            </td class="border-solid border-2 border-indigo-600">
+            <td class="border-solid border-2 border-indigo-600 rounded-full">
+                <input type="button" class="button gray h-100% w-100% px-20 border-solid border-2 border-indigo-600 rounded-full py-2 text-white text-bold" value="+" onclick="dis('+')"/>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
